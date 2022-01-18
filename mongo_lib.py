@@ -14,7 +14,7 @@ class MongoDBOperation:
                 self.atlas_url=atlas_url
 
             else:
-                return "Please provoide the Atlas URL in the parameter"
+                return "Please provide the Atlas URL in the parameter"
 
         except Exception as e:
             return e
