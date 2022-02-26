@@ -1,4 +1,3 @@
 # mongo_lib
 
-#We can use this package for ease of using mongoDB operations
-
+Written own functions over mongoDB operations on internal application and development
