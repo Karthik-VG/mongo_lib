@@ -9,7 +9,7 @@ USER_NAME = "Karthik-VG"
 
 setuptools.setup(
     name= f"{PROJECT_NAME}",
-    version="0.0.2",
+    version="0.0.3",
     author=USER_NAME,
     author_email="karthikvg.engineer@gmail.com",
     description="Its a implementation of mongodB operations for atlas",
@@ -30,6 +30,9 @@ setuptools.setup(
     install_requires = [
         "pymongo==2.8",
         "pandas",
+        "dnspython",
+        "json",
+        "sys"
     ]
 
 )
