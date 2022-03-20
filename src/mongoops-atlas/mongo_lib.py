@@ -5,7 +5,6 @@ import pandas as pd
 import sys
 import dns
 
-
 class MongoDBOperation:
     def __init__(self, atlas_url=None):
         try:
@@ -28,6 +27,8 @@ class MongoDBOperation:
             return url
         except Exception as e:
             return e
+
+
     def get_database_client_object(self):
         """
         Return pymongoClient object to perform action with MongoDB
@@ -37,6 +38,8 @@ class MongoDBOperation:
             return client
         except Exception as e:
             return e
+
+            
     def close_database_client_object(self, obj_name):
         """
 
@@ -102,6 +105,8 @@ class MongoDBOperation:
             return client[db_name]
         except Exception as e:
             return e
+
+
     def create_collection_in_database(self, database, collection_name):
         """
         database:database
@@ -113,6 +118,7 @@ class MongoDBOperation:
             return database[collection_name]
         except Exception as e:
             return e
+
 
     def is_collection_present(self, collection_name, database):
         """
@@ -148,6 +154,7 @@ class MongoDBOperation:
             return False
         except Exception as e:
             return e
+            
 
     def get_collection(self, collection_name, database):
         """
@@ -161,6 +168,8 @@ class MongoDBOperation:
             return collection
         except Exception as e:
             return e
+
+
     def is_record_present(self, db_name, collection_name, record):
         """
         db_name: database name
@@ -182,6 +191,8 @@ class MongoDBOperation:
                 return False
         except Exception as e:
             return e
+
+
     def create_record(self, collection, data):
         """
         collection: Accept collection name
@@ -194,6 +205,8 @@ class MongoDBOperation:
             return 1
         except Exception as e:
             return e
+
+
     def create_records(self, collection, data):
         """
         collection: collection object
@@ -206,6 +219,8 @@ class MongoDBOperation:
             return len(data)
         except Exception as e:
             return e
+
+
     def insert_record_in_collection(self, db_name, collection_name, record):
         """
         db_name: database name
@@ -225,6 +240,8 @@ class MongoDBOperation:
             return no_of_row_inserted
         except Exception as e:
             return e
+
+
     def drop_collection(self, db_name, collection_name):
         """
 
@@ -241,6 +258,8 @@ class MongoDBOperation:
             return True
         except Exception as e:
             return e
+
+
     def insert_records_in_collection(self, db_name, collection_name, records):
         """
         db_name: database name
@@ -259,6 +278,8 @@ class MongoDBOperation:
             return no_of_row_inserted
         except Exception as e:
             return e
+
+
     def insert_dataframe_into_collection(self, db_name, collection_name, data_frame):
         """
         db_name:Database Name
@@ -277,6 +298,8 @@ class MongoDBOperation:
             return len(records)
         except Exception as e:
             return e
+
+
     def get_record(self, database_name, collection_name, query=None):
         try:
             client = self.get_database_client_object()
@@ -311,6 +334,8 @@ class MongoDBOperation:
                 return None
         except Exception as e:
             return e
+
+
     def get_max_value_of_column(self, database_name, collection_name, query, column):
         """
 
@@ -336,6 +361,8 @@ class MongoDBOperation:
 
         except Exception as e:
             return e
+
+
     def get_records(self, database_name, collection_name, query=None):
         """
 
@@ -352,6 +379,8 @@ class MongoDBOperation:
             return record
         except Exception as e:
             return e
+
+
     def update_record_in_collection(self, database_name, collection_name, query, new_value):
         """
 
@@ -371,6 +400,8 @@ class MongoDBOperation:
             return result.raw_result["nModified"]
         except Exception as e:
             return e
+
+            
     def get_dataframe_of_collection(self, db_name, collection_name,query=None):
         """
 
