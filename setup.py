@@ -8,7 +8,7 @@ PROJECT_NAME = "mongoops-atlas"
 USER_NAME = "Karthik-VG"
 
 setuptools.setup(
-    name= f"{PROJECT_NAME}-{USER_NAME}",
+    name= f"{PROJECT_NAME}",
     version="0.0.1",
     author=USER_NAME,
     author_email="karthikvg.engineer@gmail.com",
