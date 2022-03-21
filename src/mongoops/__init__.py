@@ -1,1 +1,1 @@
-from .mongo_lib import MongoDBOperation
+from mongoops.ops import MongoDBOperation
