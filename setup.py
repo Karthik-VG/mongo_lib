@@ -4,12 +4,12 @@ import setuptools
 with open("README.md", "r", encoding="utf-8") as fh:
     long_description = fh.read()
 
-PROJECT_NAME = "mongoops_atlas"
+PROJECT_NAME = "mongoops"
 USER_NAME = "Karthik-VG"
 
 setuptools.setup(
     name= f"{PROJECT_NAME}",
-    version="0.0.5",
+    version="0.0.1",
     author=USER_NAME,
     author_email="karthikvg.engineer@gmail.com",
     description="Its a implementation of mongodB operations for atlas",

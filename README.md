@@ -1,3 +1,6 @@
-# mongo_lib
+#mongoops - Library built on top of pymongo
 
-Written own functions over mongoDB operations on internal application and development
+'''pip install mongoops'''
+
+
+
