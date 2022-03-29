@@ -2,7 +2,7 @@
 
 This package built on top of pymongo to make ease of using MongoDB atlas operations.
 
-# How to use -
+# How to use mongoops
 
 * install the latest package 
 
@@ -18,7 +18,7 @@ This package built on top of pymongo to make ease of using MongoDB atlas operati
 
 * Now run below snippets of code in your jupyter-notebooks / python project to use pytorch defined functions
 
-## Import mongoops
+## Importing mongoops
 
 ```python
 
@@ -38,7 +38,43 @@ URL = f"mongodb+srv://{USERNAME}:{PASSWORD}@cluster0.ornbe.mongodb.net/test"
 
 ```
 
+## Creating a mongo client
 
+```python
+
+mongo=MongoDBOperation(atlas_url=URL)
+
+client=mongo.get_database_client_object()
+
+```
+
+## Creating a database using mongoDB client
+
+```python
+
+DB=mongo.create_database(client,"DB_name")
+
+COLLECTION=mongo.create_collection_in_database(DB,"collection_name")
+
+mongo.create_record(COLLECTION,{"val":"mongoops"})
+
+```
+
+## Checking the DB presence 
+
+```python
+
+mongo.is_database_present(client,"DB_name")
+
+```
+
+## Checking the collection inside DataBase
+
+```python
+
+mongo.is_collection_present("collection_name",DB)
+
+```
 
 ## pypi repo link -
 
