@@ -60,7 +60,7 @@ mongo.create_record(COLLECTION,{"val":"mongoops"})
 
 ```
 
-## Checking the DB presence 
+## Checking for DB presence 
 
 ```python
 
@@ -68,7 +68,7 @@ mongo.is_database_present(client,"DB_name")
 
 ```
 
-## Checking the collection inside DataBase
+## Checking for collection inside DataBase
 
 ```python
 
