@@ -78,7 +78,10 @@ mongo.is_collection_present("collection_name",DB)
 
 ## pypi repo link -
 
-[mongoops](https://pypi.org/project/mongoops/)
+[mongoops - PYPI](https://pypi.org/project/mongoops/)
 
+## Github repo link - 
+
+[mongoops - Github](https://github.com/Karthik-VG/mongo_lib/)
 
 
